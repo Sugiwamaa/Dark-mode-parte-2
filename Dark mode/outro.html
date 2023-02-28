@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outro modo do Dark mode</title>
+
+    <style>
+
+        body {
+        
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+        
+        }
+        
+        .dark-mode {
+        
+        background-color: black;
+        color: white;
+        }
+
+        img {
+
+            width: 100px;
+        }
+        
+        
+        
+           </style> 
+        
+</head>
+<body>
+    
+    <h1>Usando o modo.</h1>
+    <h2>Usando Dark mode com HTML, CSS e JS.</h2>
+
+    <p>este é um exemplo de utilização do modo escuro com o uso de uma imagem como botão.</p>
+    <img src = "hee.jpg" onclick = "DarkMode()"/>
+
+    <script>
+
+function DarkMode() {
+
+let minhaImagem = document.querySelector('img');
+var element = document.body;
+element.classList.toggle("dark-mode");
+let meuSrc = minhaImagem.getAttribute ('src');
+if(meuSrc === 'hee.jpg') {
+    minhaImagem.setAttribute ('src', 'yeah.jpg');
+} else {
+    minhaImagem.setAttribute('src', 'hee.jpg');
+}
+
+}
+
+    </script>
+</body>
+</html>

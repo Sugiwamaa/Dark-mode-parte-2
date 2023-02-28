@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+   <style>
+
+body {
+
+padding: 25px;
+background-color: white;
+color: black;
+font-size: 25px;
+
+}
+
+.dark-mode {
+
+background-color: black;
+color: white;
+
+}
+
+.light-mode {
+
+background-color: white;
+color: black;
+}
+img {
+    width: 100px;
+}
+
+
+   </style> 
+
+
+</head>
+<body>
+    
+
+<h1>Usando o modo escurão.</h1>
+
+<p>exemplo para usar o dark mode em navegador WEB usando o HTML, CSS e JS.</p>
+
+<img scr ="yeah.jpg">
+
+<h3 id ="DarkModeText"> modo escuro desativado.</h3>
+<button onclick="DarkMode()">Modo escuro.</button>
+<button onclick="LightMode()">Modo claro.</button>
+
+<script>
+
+    let minhaImagem = document.querySelector('img');
+    function DarkMode() {
+
+var element = document.body;
+var content = document.getElementById("DarkModeText");
+element.className = "dark-mode";
+content.innerText = "O modo escuro tá ativado";
+let meuSrc = minhaImagem.getAttribute('src');
+minhaImagem.setAttribute ('src', 'yeah.jpg');
+
+}
+
+function LightMode() {
+
+    var element = document.body;
+var content = document.getElementById("DarkModeText");
+element.className = "light-mode";
+content.innerText = "O modo escuro tá desativado";
+let meuSrc = minhaImagem.getAttribute('src');
+minhaImagem.setAttribute ('src', 'hee.jpg');
+}
+</script>
+
+</body>
+</html>
